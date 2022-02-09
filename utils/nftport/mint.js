@@ -3,10 +3,10 @@ const path = require("path");
 const basePath = process.cwd();
 const fs = require("fs");
 
-const AUTH = 'YOUR API KEY HERE';
-const CONTRACT_ADDRESS = 'YOUR CONTRACT ADDRESS HERE';
-const MINT_TO_ADDRESS = 'YOUR WALLET ADDRESS HERE';
-const CHAIN = 'rinkeby';
+const AUTH = 'a6b0f663-8dc2-407f-8fcf-22200ed9e3cc';
+const CONTRACT_ADDRESS = '0x2a55C3fe6ea70415E747820B7E53ba868aC423df';
+const MINT_TO_ADDRESS = '0x4Cd16BEdb72ad2DB27F293C4839569528DaB1659';
+const CHAIN = 'polygon';
 const TIMEOUT = 1000; // Milliseconds. This a timeout for errors only. If there is an error, it will wait then try again. 5000 = 5 seconds.
 
 if (!fs.existsSync(path.join(`${basePath}/build`, "/minted"))) {
@@ -79,6 +79,7 @@ async function fetchWithRetry(meta)  {
 
         if(status === 200) {
           return res.json();
+          console.log(`Minted: ${json.transaction_external_url}`);
         }            
         else {
           console.error(`ERROR STATUS: ${status}`)
@@ -91,7 +92,7 @@ async function fetchWithRetry(meta)  {
         if(json.response === "OK"){
           return resolve(json);
         } else {
-          console.error(`NOK: ${json.error}`)
+          console.error(`Oh Fuck ${json.error}`)
           console.log('Retrying')
           await timer(TIMEOUT)
           fetch_retry(_meta)

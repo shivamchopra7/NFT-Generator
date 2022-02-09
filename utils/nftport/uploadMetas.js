@@ -4,7 +4,7 @@ const basePath = process.cwd();
 const fs = require("fs");
 const readDir = `${basePath}/build/json`; // change this directory if you are uploading generic images first in order to do a reveal.
 
-const AUTH = 'YOUR API KEY HERE';
+const AUTH = 'a6b0f663-8dc2-407f-8fcf-22200ed9e3cc';
 const TIMEOUT = 1000; // Milliseconds. Extend this if needed to wait for each upload. 1000 = 1 second.
 
 const allMetadata = [];
@@ -90,7 +90,7 @@ async function fetchWithRetry(file)  {
         if(json.response === "OK"){
           return resolve(json);
         } else {
-          console.error(`NOK: ${json.error}`)
+          console.error(`Oh Fuck ${json.error}`)
           console.log('Retrying')
           await timer(TIMEOUT)
           fetch_retry(_file)

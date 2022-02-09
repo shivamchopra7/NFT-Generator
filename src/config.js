@@ -5,7 +5,7 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Varun Jain Stickers";
+const namePrefix = "Varun Jain";
 const description = "Miles Education | Stickers Of Worlds Favorite Instructor For CPA & CMA";
 const baseUri = "ipfs://NewUriToReplace";
 
@@ -24,7 +24,7 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 10,
+    growEditionSizeTo: 29,
     layersOrder: [
       { name: "varunstickers" },
     ],
