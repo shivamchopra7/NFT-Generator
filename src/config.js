@@ -5,17 +5,17 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Your Collection";
-const description = "Remember to replace this description";
+const namePrefix = "Varun Jain Stickers";
+const description = "Miles Education | Stickers Of Worlds Favorite Instructor For CPA & CMA";
 const baseUri = "ipfs://NewUriToReplace";
 
 const solanaMetadata = {
-  symbol: "YC",
+  symbol: "ME",
   seller_fee_basis_points: 1000, // Define how much % you want from secondary market sales 1000 = 10%
-  external_url: "https://www.youtube.com/c/hashlipsnft",
+  external_url: "https://www.youtube.com/c/MilesEducationCPACMAReview",
   creators: [
     {
-      address: "7fXNuer5sbZtaTEPhtJ5g5gNtuyRoKkvxdjEjEnPN4mC",
+      address: "0x4Cd16BEdb72ad2DB27F293C4839569528DaB1659",
       share: 100,
     },
   ],
@@ -24,15 +24,9 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 10,
     layersOrder: [
-      { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "varunstickers" },
     ],
   },
 ];
@@ -68,7 +62,7 @@ const text = {
 };
 
 const pixelFormat = {
-  ratio: 2 / 128,
+  ratio: 2 / 512,
 };
 
 const background = {
@@ -79,7 +73,7 @@ const background = {
 };
 
 const extraMetadata = {
-  external_url: "https://codecats.xyz", // Replace with your website or remove this line if you do not have one.
+  external_url: "https://mileseducation.com", // Replace with your website or remove this line if you do not have one.
 };
 
 const rarityDelimiter = "#";
@@ -97,7 +91,7 @@ const preview_gif = {
   numberOfImages: 5,
   order: "ASC", // ASC, DESC, MIXED
   repeat: 0,
-  quality: 100,
+  quality: 200,
   delay: 500,
   imageName: "preview.gif",
 };
